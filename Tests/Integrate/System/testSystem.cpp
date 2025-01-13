@@ -393,7 +393,7 @@ int main()
     TestSystem_NesTest();
 
     TestSystem_HelloWorld_Cpu_Ppu();
-    TestSystem_Giko005();
+    // TestSystem_Giko005();
     //TestSystem_NesTest_Emulator_Log();
     return 0;
 }

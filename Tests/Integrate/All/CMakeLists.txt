@@ -1,22 +1,27 @@
-add_executable(testIntegrate_All WIN32 testEmu.cpp)
+add_executable(testIntegrate_All testEmu.cpp)
 # EmotionalNES ライブラリをリンク
 target_link_libraries(testIntegrate_All EmotionalNES)
 target_link_libraries(testIntegrate_All testUtil)
 
+set(CMAKE_CXX_FLAGS_DEBUG "/MTd")
+
 # DxLib リンク
 target_link_libraries(
     testIntegrate_All
-    DxLib
-    DxUseCLib
-    DxDrawFunc
-    libjpeg
-    libpng
-    zlib
-    libtiff
-    libtheora_static
-    vorbis_static
-    vorbisfile_static
-    ogg_static
+    SDL2::SDL2
+    SDL2::SDL2main
+    # SDL2
+    # DxLib
+    # DxUseCLib
+    # DxDrawFunc
+    # libjpeg
+    # libpng
+    # zlib
+    # libtiff
+    # libtheora_static
+    # vorbis_static
+    # vorbisfile_static
+    # ogg_static
     # よくわかんないけどエミュのフロントエンドでは多分つかわないだろ……
     #libbulletdynamics
     #libbulletcollision
@@ -28,4 +33,3 @@ target_include_directories(testIntegrate_System
   PRIVATE ${PROJECT_SOURCE_DIR}/Programs/src
   PRIVATE ${PROJECT_SOURCE_DIR}/Tests/Includes
   )
-

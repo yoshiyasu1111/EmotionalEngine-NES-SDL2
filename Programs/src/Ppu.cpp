@@ -1,6 +1,7 @@
 #pragma once
 #include <cassert>
 #include <utility>
+#include <cstdlib>
 #include "Ppu.h"
 
 namespace {
